@@ -1,0 +1,14 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/assets/StyleSheet/",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveServer.settings.CustomBrowser": null,
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+  "workbench.tree.indent": 8,
+  "liveSassCompile.settings.forceBaseDirectory": ""
+}

@@ -1,0 +1,48 @@
+@import "./abstracts/_abstracts-dir";
+@import "./base/_base-dir";
+@import "./components/_components-dir";
+@import "./layout/_layout.-dir";
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+    .container {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.8rem;
+
+        &-text {
+            color: $clr-dark;
+            font-weight: 700;
+        }
+
+        &-text span {
+            color: $clr-blue;
+        }
+
+        &-icon {
+            width: 25px;
+            margin-right: 6px;
+            opacity: 0.8;
+        }
+    }
+
+    .brand-and-toggler {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

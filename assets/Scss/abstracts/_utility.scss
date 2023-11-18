@@ -1,0 +1,56 @@
+/*----- text colors -----*/
+@each $class-name,
+$text-color in $text-colors {
+    .#{$class-name} {
+        color: $text-color;
+    }
+}
+
+/*----- backgrounds---- */
+@each $class-name,
+$bg-color in $bg-colors {
+    .#{$class-name} {
+        background-color: $bg-color;
+    }
+}
+
+/*----- text aligns---- */
+@each $text-align-class,
+$text-align in $text-aligns {
+    .#{$text-align-class} {
+        text-align: $text-align;
+    }
+}
+
+/*----- text transforms---- */
+@each $text-transform-class,
+$text-transform in $text-transforms {
+    .#{$text-transform-class} {
+        text-transform: $text-transform;
+    }
+}
+
+/*----- font-weights ---- */
+@each $weight-class,
+$weight-size in $font-weights {
+    .#{$weight-class} {
+        font-weight: $weight-size;
+    }
+
+}
+
+/*----- font-sizes ---- */
+@each $font-class,
+$font-size in $font-sizes {
+    .#{$font-class} {
+        font-size: $font-size;
+    }
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}

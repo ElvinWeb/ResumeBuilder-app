@@ -1,0 +1,47 @@
+.menu-btn {
+    font-size: 35px;
+    transition: $transition;
+
+    &:hover {
+        color: $clr-blue;
+    }
+}
+
+.btn {
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 1.4rem 1.6rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: $clr-blue;
+    color: $clr-white;
+    border: 1px solid $clr-blue;
+    transition: $transition;
+
+    &:hover {
+        background-color: transparent;
+        color: $clr-dark;
+        border-color: $clr-grey;
+    }
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: $clr-dark;
+    border: 1px solid $clr-grey;
+    transition: $transition;
+
+    &:hover {
+        background-color: $clr-blue;
+        color: $clr-white;
+        border-color: $clr-blue;
+    }
+}
+
+.btn-group button:first-child,
+.btn-group a:first-child {
+    margin-right: 1rem !important;
+}
