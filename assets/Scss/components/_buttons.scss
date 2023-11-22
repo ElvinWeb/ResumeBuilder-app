@@ -1,9 +1,10 @@
 .menu-btn {
     font-size: 35px;
     transition: $transition;
+    color: $clr-blue;
 
     &:hover {
-        color: $clr-blue;
+        color: $clr-dark;
     }
 }
 

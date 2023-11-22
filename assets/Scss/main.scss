@@ -8,10 +8,11 @@
     margin: 0 auto;
     padding: 0 1.6rem;
 }
+
 .navbar {
     height: 80px;
-    display: flex;
-    align-items: center;
+    @include flex-box(null);
+
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
     .container {
@@ -19,14 +20,13 @@
     }
 
     .navbar-brand {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        @include flex-box(flex-end);
         font-size: 1.8rem;
 
         &-text {
             color: $clr-dark;
             font-weight: 700;
+            font-size: 23px;
         }
 
         &-text span {
@@ -41,8 +41,102 @@
     }
 
     .brand-and-toggler {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-box(space-between);
+    }
+}
+
+.header {
+    min-height: calc(100vh - 80px);
+    @include flex-direction(column);
+
+    &-content {
+        @include img-width(750px);
+
+        img {
+            max-width: 750px;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+            margin-top: 3.2rem;
+        }
+
+        .lg-title {
+            @extend %section-title;
+        }
+
+        p {
+            margin-bottom: 2.6rem;
+            line-height: 1.6;
+        }
+
+        .sub-title {
+            margin-top: 1.5rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.section-one {
+    padding: 8rem 0;
+    min-height: 80vh;
+    @extend %flex-center;
+
+    .section-one-l img {
+        @include img-width(750px);
+    }
+
+    .btn-group {
+        margin-top: 2rem;
+    }
+
+    .section-one-r {
+        @include img-width(545px);
+
+        img {
+            margin-top: 4rem;
+        }
+
+        .lg-title {
+            @extend %section-title;
+        }
+
+        .text {
+            color: $clr-dark;
+            opacity: 0.9;
+            margin: 2rem 0;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+    }
+
+}
+
+/* responsive */
+@media screen and (min-width: 768px) {
+    .section-two .section-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .section-one-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+
+    .section-one-r {
+        text-align: left;
+    }
+
+    .section-two .section-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section-two .section-item {
+        text-align: left;
+    }
+
+    .section-two .section-item-icon img {
+        margin-left: 0;
     }
 }

@@ -1,0 +1,20 @@
+@mixin flex-box($justify) {
+    @if $justify==null {
+        @extend %flex-center;
+    }
+
+    @else {
+        @extend %flex-center;
+        justify-content: $justify;
+    }
+}
+
+@mixin flex-direction($direction) {
+    @include flex-box(center);
+    flex-direction: $direction;
+}
+
+@mixin img-width($width) {
+    max-width: $width;
+    margin: 0 auto;
+}

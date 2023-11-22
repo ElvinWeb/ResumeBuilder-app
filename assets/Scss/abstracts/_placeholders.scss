@@ -1,0 +1,12 @@
+%flex-center {
+    display: flex;
+    align-items: center;
+}
+
+%section-title {
+    padding: 1.4rem 0;
+    font-size: 37px;
+    line-height: 1.4;
+    color: $clr-dark;
+    font-weight: 800;
+}

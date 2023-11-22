@@ -8,7 +8,7 @@ $clr-dark: #1e2532;
 $clr-black: #000;
 $clr-grey: #656e83;
 $clr-green: #084C41;
-/* <========== Variable-maps =======> */
+/* <========== Variable-Maps =======> */
 $text-colors: (text-blue: $clr-blue, text-blue-mid: $clr-blue-mid, text-blue-dark: $clr-blue-dark, text-bright: $clr-bright, text-dark: $clr-dark, text-gray: $clr-grey, text-white: $clr-white);
 $bg-colors: (bg-blue: $clr-blue, bg-blue-mid: $clr-blue-mid, bg-blue-dark: $clr-blue-dark, bg-bright: $clr-bright, bg-dark: $clr-dark, bg-gray: $clr-grey, bg-white: $clr-white);
 $font-sizes: (fs-13: 13px, fs-14: 14px, fs-15: 15px, fs-16: 16px, fs-17: 17px, fs-18: 18px, fs-19: 19px, fs-20: 20px, fs-21: 21px, fs-22: 22px, fs-23: 23px, fs-24: 24px, fs-25:25px);
@@ -19,5 +19,5 @@ $text-transforms: (text-uppercase: uppercase, text-lowercase: lowercase, text-ca
 /* <========== Fonts ========> */
 $font-nunitoSans: 'Nunito Sans',
 sans-serif;
-/* <========== transitions ========> */
+/* <========== Transitions ========> */
 $transition: all 0.3s ease-in-out;
