@@ -45,36 +45,6 @@
     }
 }
 
-.header {
-    min-height: calc(100vh - 80px);
-    @include flex-direction(column);
-
-    &-content {
-        @include img-width(750px);
-
-        img {
-            max-width: 750px;
-            border-top-right-radius: 8px;
-            border-top-left-radius: 8px;
-            margin-top: 3.2rem;
-        }
-
-        .lg-title {
-            @extend %section-title;
-        }
-
-        p {
-            margin-bottom: 2.6rem;
-            line-height: 1.6;
-        }
-
-        .sub-title {
-            margin-top: 1.5rem;
-            font-weight: 600;
-        }
-    }
-}
-
 .section-one {
     padding: 8rem 0;
     min-height: 80vh;
@@ -86,6 +56,7 @@
 
     .btn-group {
         margin-top: 2rem;
+        @include flex-box(flex-start);
     }
 
     .section-one-r {
@@ -102,13 +73,15 @@
         .text {
             color: $clr-dark;
             opacity: 0.9;
-            margin: 2rem 0;
+            padding: 2rem 0;
             line-height: 1.6;
             font-size: 18px;
         }
     }
 
 }
+
+
 
 /* responsive */
 @media screen and (min-width: 768px) {

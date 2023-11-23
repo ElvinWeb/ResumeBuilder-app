@@ -1,0 +1,29 @@
+.header {
+    min-height: calc(100vh - 80px);
+    @include flex-direction(column);
+
+    &-content {
+        @include img-width(750px);
+
+        img {
+            max-width: 750px;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+            margin-top: 3.2rem;
+        }
+
+        .lg-title {
+            @extend %section-title;
+        }
+
+        p {
+            margin-bottom: 2.6rem;
+            line-height: 1.6;
+        }
+
+        .sub-title {
+            margin-top: 1.5rem;
+            font-weight: 600;
+        }
+    }
+}

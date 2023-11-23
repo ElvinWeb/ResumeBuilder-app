@@ -73,9 +73,20 @@
               <a href="./resume.html" class="btn btn-primary text-uppercase"
                 >create my resume</a
               >
-              <a href="#" class="btn btn-secondary text-uppercase"
-                >watch video</a
-              >
+              <div class="modal">
+                <a
+                  style="cursor: pointer"
+                  class="btn btn-secondary text-uppercase"
+                  id="watch-btn"
+                  >watch tutorial</a
+                >
+                <div class="modal-container">
+                  <span class="modal-close">
+                    <ion-icon name="close-outline"></ion-icon>
+                  </span>
+                  <video src="./assets/images/cv-tutorial.mp4" controls></video>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -90,5 +101,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="./assets/JavaScript/app.js"></script>
   </body>
 </html>
