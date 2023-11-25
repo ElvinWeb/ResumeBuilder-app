@@ -4,10 +4,177 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Build Page</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./assets/StyleSheet/main.css" />
   </head>
   <body>
+    <nav class="navbar bg-white">
+      <div class="container">
+        <div class="nav-content">
+          <div class="brand-and-toggler">
+            <a href="./index.html" class="navbar-brand">
+              <img
+                src="./assets/images/curriculum-vitae.png"
+                alt="icon"
+                class="navbar-brand-icon"
+              />
+              <p class="navbar-brand-text">Build <span>Resume.</span></p>
+            </a>
+            <button type="button" class="navbar-toggler-btn">
+              <ion-icon name="menu-outline" class="menu-btn"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
+    <section id="about" class="">
+      <div class="container">
+        <div class="cv-about">
+          <form action="" class="cv-form" id="cv-form">
+            <div class="cv-form-block">
+              <div class="cv-form-row-title">
+                <h3>About Section</h3>
+              </div>
+              <div class="cv-form-row cv-form-row-about">
+                <div class="cols-3">
+                  <div class="form-element">
+                    <label for="" class="form-label">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control firstname"
+                      id=""
+                      onkeyup=""
+                      placeholder="FirstName"
+                      name="firstname"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                  <div class="form-element">
+                    <label for="" class="form-label">Middle Name</label>
+                    <input
+                      type="text"
+                      class="form-control middlename"
+                      id=""
+                      onkeyup=""
+                      placeholder="Middle Name"
+                      name="middlename"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                  <div class="form-element">
+                    <label for="" class="form-label">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control lastname"
+                      id=""
+                      onkeyup=""
+                      placeholder="LastName"
+                      name="lastname"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                </div>
+                <div class="cols-3">
+                  <div class="form-element">
+                    <label for="" class="form-label">Your Image</label>
+                    <input
+                      type="file"
+                      class="form-control image"
+                      id=""
+                      onchange=""
+                      placeholder="Image"
+                      name="image"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                  <div class="form-element">
+                    <label for="" class="form-label">Designation</label>
+                    <input
+                      type="text"
+                      class="form-control designation"
+                      id=""
+                      onkeyup=""
+                      placeholder="designation"
+                      name="designation"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                  <div class="form-element">
+                    <label for="" class="form-label">Address</label>
+                    <input
+                      type="text"
+                      class="form-control address"
+                      id=""
+                      onkeyup=""
+                      placeholder="Adress"
+                      name="address"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                </div>
+                <div class="cols-3">
+                  <div class="form-element">
+                    <label for="" class="form-label">Email</label>
+                    <input
+                      name="email"
+                      type="text"
+                      class="form-control email"
+                      id=""
+                      onkeyup=""
+                      placeholder="Email"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                  <div class="form-element">
+                    <label for="" class="form-label">Phone No:</label>
+                    <input
+                      name="phoneno"
+                      type="text"
+                      class="form-control phoneno"
+                      id=""
+                      onkeyup=""
+                      placeholder="Phone number"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                  <div class="form-element">
+                    <label for="" class="form-label">Summary</label>
+                    <input
+                      name="summary"
+                      type="text"
+                      class="form-control summary"
+                      id=""
+                      onkeyup=""
+                      placeholder="Summary"
+                    />
+                    <span class="form-text"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cv-form-block">
+              <div class="cv-form-row-title">
+                <h3>Achievements</h3>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
+    <footer id="footer" class="footer bg-dark">
+      <div class="container">
+        <div class="footer-content text-center">
+          <p class="fs-15">
+            &copy;Copyright 2022. All Rights Reserved -
+            <span>build.resume</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.min.js"></script>
+    <!-- <script src="./assets/JavaScript/app.js"></script> -->
+    <script src="./assets/JavaScript/script.js"></script>
   </body>
 </html>

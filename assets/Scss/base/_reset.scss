@@ -35,3 +35,17 @@ img {
 a {
     text-decoration: none;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+.text {
+    color: $clr-dark;
+    opacity: 0.9;
+    padding: 1rem 0;
+    line-height: 1.6;
+    font-size: 18px;
+}

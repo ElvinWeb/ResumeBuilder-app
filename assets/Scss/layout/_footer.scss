@@ -1,0 +1,11 @@
+.footer {
+    padding: 3rem 0;
+
+    .footer-content p {
+        color: $clr-grey;
+
+        span {
+            color: $clr-white;
+        }
+    }
+}

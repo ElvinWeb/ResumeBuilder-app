@@ -1,0 +1,29 @@
+.section-one {
+    padding: 8rem 0;
+    min-height: 80vh;
+    @extend %flex-center;
+
+    .section-one-l img {
+        @include img-width(750px);
+    }
+
+    .btn-group {
+        margin-top: 2rem;
+        @include flex-box(flex-start);
+    }
+
+    .section-one-r {
+        @include img-width(545px);
+
+        img {
+            margin-top: 4rem;
+        }
+
+        .lg-title {
+            @extend %section-title;
+        }
+
+        
+    }
+
+}

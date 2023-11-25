@@ -1,0 +1,34 @@
+.section-two {
+    padding: 64px 0;
+
+    .section-items {
+        display: grid;
+        gap: 2rem;
+
+        .section-item {
+            @include img-width(350px);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .section-item-icon {
+            margin: 1rem 0;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        .section-item-title {
+            color: $clr-blue-dark;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .text {
+            margin: 0.9rem 0;
+
+        }
+    }
+}
