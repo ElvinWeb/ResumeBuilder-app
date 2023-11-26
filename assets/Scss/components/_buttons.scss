@@ -46,3 +46,30 @@
 .btn-group a:first-child {
     margin-right: 1rem !important;
 }
+
+.repeater-add-btn {
+    width: 28px;
+    height: 28px;
+    background-color: $clr-blue-mid;
+    font-size: 2rem;
+    color: $clr-white;
+    margin: 1rem 0;
+}
+
+.repeater-remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #ca0b00;
+    color: $clr-white;
+    font-size: 2rem;
+}
+
+.repeater-add-btn,
+.repeater-remove-btn {
+    @include flex-box(center);
+}

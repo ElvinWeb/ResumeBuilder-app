@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Build Page</title>
+     <!-- custom css file -->
     <link rel="stylesheet" href="./assets/StyleSheet/main.css" />
   </head>
   <body>
@@ -27,7 +28,7 @@
       </div>
     </nav>
 
-    <section id="about" class="">
+    <section id="about" class="about">
       <div class="container">
         <div class="cv-about">
           <form action="" class="cv-form" id="cv-form">
@@ -156,6 +157,55 @@
               <div class="cv-form-row-title">
                 <h3>Achievements</h3>
               </div>
+              <div class="row-separator repeater">
+                <div class="repeater" data-repeater-list="group-a">
+                  <div data-repeater-list>
+                    <div class="cv-form-row cv-form-row-achievement">
+                      <div class="cols-2">
+                        <div class="form-element">
+                          <label for="" class="form-label">Title</label>
+                          <input
+                            name="achieve_title"
+                            type="text"
+                            class="form-control achieve_title"
+                            id=""
+                            onkeyup=""
+                            placeholder="Title"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">Description</label>
+                          <input
+                            name="achieve_description"
+                            type="text"
+                            class="form-control achieve_description"
+                            id=""
+                            onkeyup=""
+                            placeholder="Description"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                      </div>
+                      <button
+                        class="repeater-remove-btn"
+                        data-repeater-delete
+                        type="button"
+                      >
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  data-repeater-create
+                  value="Add"
+                  class="repeater-add-btn"
+                >
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
             </div>
           </form>
         </div>
@@ -172,9 +222,22 @@
         </div>
       </div>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- jquery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jquery repeater cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.min.js"></script>
-    <!-- <script src="./assets/JavaScript/app.js"></script> -->
+    <!-- app js-->
+    <script src="./assets/JavaScript/app.js"></script>
+    <!-- custom js -->
     <script src="./assets/JavaScript/script.js"></script>
   </body>
 </html>

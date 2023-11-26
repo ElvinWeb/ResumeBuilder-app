@@ -3,7 +3,8 @@
 /* <========== Fonts ========> */
 /* <========== Transitions ========> */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap");
-.section-one .btn-group, .section-one, .modal-container, .header, .navbar .brand-and-toggler, .navbar .navbar-brand, .navbar {
+.section-one .btn-group, .section-one, .modal-container, .header, .navbar .brand-and-toggler, .navbar .navbar-brand, .navbar, .repeater-add-btn,
+.repeater-remove-btn {
   display: flex;
   align-items: center;
 }
@@ -286,6 +287,54 @@ a {
   margin-right: 1rem !important;
 }
 
+.repeater-add-btn {
+  width: 28px;
+  height: 28px;
+  background-color: #1170CD;
+  font-size: 2rem;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.repeater-remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #ca0b00;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.repeater-add-btn,
+.repeater-remove-btn {
+  justify-content: center;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 17px;
+  color: #1e2532;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border-radius: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  padding: 0.8rem 1.6rem;
+  font-family: inherit;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.form-control:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
 .navbar {
   height: 80px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
@@ -435,6 +484,49 @@ a {
 }
 .footer .footer-content p span {
   color: #fff;
+}
+
+.about {
+  padding: 64px 0;
+}
+
+.cv-form-block {
+  margin: 3rem 0;
+}
+.cv-form-block .cv-form-row-title {
+  background-color: #1e2532;
+  padding: 0.8rem 1.6rem;
+  margin-bottom: 2rem;
+}
+.cv-form-block .cv-form-row-title h3 {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.7rem;
+}
+.cv-form-block .cv-form-row {
+  padding: 3rem 2rem 0 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  position: relative;
+}
+.cv-form-block .cv-form-row .cols-3,
+.cv-form-block .cv-form-row .cols-2 {
+  display: grid;
+}
+.cv-form-block .cv-form-row .form-element {
+  margin-bottom: 3rem;
+  position: relative;
+}
+.cv-form-block .cv-form-row .form-element .form-text {
+  color: #ca0b00;
+  font-size: 12px;
+  position: absolute;
+  letter-spacing: 0.5px;
+  top: calc(100% + 2px);
+  left: 0;
+  width: 100%;
 }
 
 /* responsive */
