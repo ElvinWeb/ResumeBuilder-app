@@ -1,0 +1,49 @@
+.preview-container {
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 32% auto;
+    box-shadow: $shadow-color;
+    overflow: hidden;
+
+    &-left {
+        padding: 3rem 3rem 2rem 3rem;
+    }
+
+    &-right {
+        padding: 3rem 3rem 3rem 4rem;
+    }
+
+    .preview-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: auto;
+        margin-left: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .preview-item-name {
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin: 1.8rem 0;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: " ";
+            bottom: -10px;
+            width: 50%;
+            height: 1.5px;
+            background-color: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
+}

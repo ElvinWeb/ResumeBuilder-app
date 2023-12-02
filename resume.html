@@ -27,14 +27,20 @@
         </div>
       </div>
     </nav>
-
+    <header class="cv-form-header">
+      <div class="container">
+        <div class="header-container">
+          <h1 class="title text-uppercase">cv-form</h1>
+        </div>
+      </div>
+    </header>
     <section id="about" class="about">
       <div class="container">
         <div class="cv-about">
           <form action="" class="cv-form" id="cv-form">
             <div class="cv-form-block">
               <div class="cv-form-row-title">
-                <h3>About Section</h3>
+                <h3>About</h3>
               </div>
               <div class="cv-form-row cv-form-row-about">
                 <div class="cols-3">
@@ -44,7 +50,7 @@
                       type="text"
                       class="form-control firstname"
                       id=""
-                      onkeyup=""
+                      onkeyup="generateCV()"
                       placeholder="FirstName"
                       name="firstname"
                     />
@@ -56,7 +62,7 @@
                       type="text"
                       class="form-control middlename"
                       id=""
-                      onkeyup=""
+                      onkeyup="generateCV()"
                       placeholder="Middle Name"
                       name="middlename"
                     />
@@ -68,7 +74,7 @@
                       type="text"
                       class="form-control lastname"
                       id=""
-                      onkeyup=""
+                      onkeyup="generateCV()"
                       placeholder="LastName"
                       name="lastname"
                     />
@@ -82,7 +88,7 @@
                       type="file"
                       class="form-control image"
                       id=""
-                      onchange=""
+                      onkeyup="generateCV()"
                       placeholder="Image"
                       name="image"
                     />
@@ -94,7 +100,7 @@
                       type="text"
                       class="form-control designation"
                       id=""
-                      onkeyup=""
+                      onkeyup="generateCV()"
                       placeholder="designation"
                       name="designation"
                     />
@@ -106,7 +112,7 @@
                       type="text"
                       class="form-control address"
                       id=""
-                      onkeyup=""
+                      onkeyup="generateCV()"
                       placeholder="Adress"
                       name="address"
                     />
@@ -121,7 +127,7 @@
                       type="text"
                       class="form-control email"
                       id=""
-                      onkeyup=""
+                      onkeyup="generateCV()"
                       placeholder="Email"
                     />
                     <span class="form-text"></span>
@@ -133,7 +139,7 @@
                       type="text"
                       class="form-control phoneno"
                       id=""
-                      onkeyup=""
+                      onkeyup="generateCV()"
                       placeholder="Phone number"
                     />
                     <span class="form-text"></span>
@@ -145,7 +151,7 @@
                       type="text"
                       class="form-control summary"
                       id=""
-                      onkeyup=""
+                      onkeyup="generateCV()"
                       placeholder="Summary"
                     />
                     <span class="form-text"></span>
@@ -526,6 +532,104 @@
         </div>
       </div>
     </section>
+    <section id="preview-section" class="print-area">
+      <div class="container">
+        <div class="preview-container">
+          <div class="preview-container-left bg-green text-white">
+            <div class="preview-block text-center">
+              <div class="preview-image">
+                <img src="" alt="" id="image_dsp" />
+              </div>
+              <div class="preview-item preview-item-name">
+                <span class="preview-item-val fw-6" id="fullname_dsp"></span>
+              </div>
+              <div class="preview-item">
+                <span
+                  class="preview-item-val text-uppercase fw-6 ls-1"
+                  id="designation_dsp"
+                ></span>
+              </div>
+            </div>
+            <div class="preview-block">
+              <div class="preview-block-title">
+                <h3>about</h3>
+              </div>
+              <div class="preview-block-list">
+                <div class="preview-item">
+                  <span class="preview-item-val" id="phoneno_dsp"> </span>
+                </div>
+                <div class="preview-item">
+                  <span class="preview-item-val" id="email_dsp"> </span>
+                </div>
+                <div class="preview-item">
+                  <span class="preview-item-val" id="address_dsp"> </span>
+                </div>
+                <div class="preview-item">
+                  <span class="preview-item-val" id="summary_dsp"> </span>
+                </div>
+              </div>
+            </div>
+            <div class="preview-block">
+              <div class="preview-block-title">
+                <h3>skills</h3>
+              </div>
+              <div
+                class="skills-items preview-block-list"
+                id="skills-display"
+              ></div>
+            </div>
+          </div>
+          <div class="preview-container-right bg-white">
+            <div class="preview-block">
+              <div class="preview-block-title">
+                <h3>Achievements</h3>
+              </div>
+              <div
+                class="achievements-items preview-block-list"
+                id="achievements_dsp"
+              ></div>
+            </div>
+
+            <div class="preview-block">
+              <div class="preview-block-title">
+                <h3>Educations</h3>
+              </div>
+              <div
+                class="educations-items preview-block-list"
+                id="educations_dsp"
+              ></div>
+            </div>
+
+            <div class="preview-block">
+              <div class="preview-block-title">
+                <h3>Experiences</h3>
+              </div>
+              <div
+                class="experiences-items preview-block-list"
+                id="experiences_dsp"
+              ></div>
+            </div>
+
+            <div class="preview-block">
+              <div class="preview-block-title">
+                <h3>Projects</h3>
+              </div>
+              <div
+                class="projects-items preview-block-list"
+                id="projects_dsp"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="print-btn-section">
+      <div class="container">
+        <button type="button" class="print-btn btn btn-primary">
+          Print CV
+        </button>
+      </div>
+    </section>
 
     <footer id="footer" class="footer bg-dark">
       <div class="container">
@@ -538,6 +642,7 @@
       </div>
     </footer>
 
+    <!-- Ion-Icons cdn -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -552,7 +657,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.min.js"></script>
     <!-- app js-->
     <script src="./assets/JavaScript/app.js"></script>
-    <!-- custom js -->
-    <script src="./assets/JavaScript/script.js"></script>
   </body>
 </html>

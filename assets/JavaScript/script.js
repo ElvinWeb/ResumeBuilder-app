@@ -1,18 +1,13 @@
-$(document).ready(function () {
-  $(".repeater").repeater({
-    initEmpty: false,
-    defaultValue: {
-      "text-input": "",
-    },
-    show: function () {
-      $(this).slideDown();
-    },
-    hide: function () {
-      $(this).slideUp(deleteElement);
-      setTimeout(() => {
-        generateCV(); 
-      }, 500);
-    },
-    isFirstItemUndeletable: true,
-  });
+let watchBtn = document.getElementById("watch-btn");
+let videoContainer = document.querySelector(".modal-container");
+let closeBtn = document.querySelector(".modal-close");
+
+watchBtn.addEventListener("click", () => {
+  videoContainer.classList.add("show");
+});
+videoContainer.addEventListener("click", () => {
+  videoContainer.classList.remove("show");
+});
+closeBtn.addEventListener("click", () => {
+  videoContainer.classList.remove("show");
 });
