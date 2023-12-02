@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Build Page</title>
-     <!-- custom css file -->
+    <!-- custom css file -->
     <link rel="stylesheet" href="./assets/StyleSheet/main.css" />
   </head>
   <body>
@@ -159,7 +159,7 @@
               </div>
               <div class="row-separator repeater">
                 <div class="repeater" data-repeater-list="group-a">
-                  <div data-repeater-list>
+                  <div data-repeater-item>
                     <div class="cv-form-row cv-form-row-achievement">
                       <div class="cols-2">
                         <div class="form-element">
@@ -191,6 +191,321 @@
                         class="repeater-remove-btn"
                         data-repeater-delete
                         type="button"
+                      >
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  data-repeater-create
+                  value="Add"
+                  class="repeater-add-btn"
+                >
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <div class="cv-form-block">
+              <div class="cv-form-row-title">
+                <h3>experience</h3>
+              </div>
+              <div class="row-separator repeater">
+                <div class="repeater" data-repeater-list="group-b">
+                  <div data-repeater-item>
+                    <div class="cv-form-row cv-form-row-experience">
+                      <div class="cols-3">
+                        <div class="form-element">
+                          <label for="" class="form-label">Title</label>
+                          <input
+                            name="exp"
+                            type="text"
+                            class="form-control exp_title"
+                            id=""
+                            onkeyup=""
+                            placeholder="Title"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label"
+                            >Company / Organization</label
+                          >
+                          <input
+                            name="exp_organization"
+                            type="text"
+                            class="form-control exp_organization"
+                            id=""
+                            onkeyup=""
+                            placeholder="Organization"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">Location</label>
+                          <input
+                            name="exp_location"
+                            type="text"
+                            class="form-control exp_location"
+                            id=""
+                            onkeyup=""
+                            placeholder="Location"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                      </div>
+                      <div class="cols-3">
+                        <div class="form-element">
+                          <label for="" class="form-label">Start Date</label>
+                          <input
+                            name="exp_start_date"
+                            type="date"
+                            class="form-control exp_start_date"
+                            id=""
+                            onkeyup=""
+                            placeholder="Start Date"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">End Date</label>
+                          <input
+                            name="exp_end_date"
+                            type="date"
+                            class="form-control exp_end-date"
+                            id=""
+                            onkeyup=""
+                            placeholder="End Date"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label"
+                            >Experience Description</label
+                          >
+                          <input
+                            name="exp_description"
+                            type="text"
+                            class="form-control exp_description"
+                            id=""
+                            onkeyup=""
+                            placeholder="Experience Description"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                      </div>
+                      <button
+                        class="repeater-remove-btn"
+                        data-repeater-delete
+                        type="button"
+                      >
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  data-repeater-create
+                  value="Add"
+                  class="repeater-add-btn"
+                >
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <div class="cv-form-block">
+              <div class="cv-form-row-title">
+                <h3>education</h3>
+              </div>
+
+              <div class="row-separator repeater">
+                <div class="repeater" data-repeater-list="group-c">
+                  <div data-repeater-item>
+                    <div class="cv-form-row cv-form-row-experience">
+                      <div class="cols-3">
+                        <div class="form-element">
+                          <label for="" class="form-label">School</label>
+                          <input
+                            name="edu_school"
+                            type="text"
+                            class="form-control edu_school"
+                            id=""
+                            onkeyup=""
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">Degree</label>
+                          <input
+                            name="edu_degree"
+                            type="text"
+                            class="form-control edu_degree"
+                            id=""
+                            onkeyup=""
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">City</label>
+                          <input
+                            name="edu_city"
+                            type="text"
+                            class="form-control edu_city"
+                            id=""
+                            onkeyup=""
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                      </div>
+
+                      <div class="cols-3">
+                        <div class="form-element">
+                          <label for="" class="form-label">Start Date</label>
+                          <input
+                            name="edu_start_date"
+                            type="date"
+                            class="form-control edu_start_date"
+                            id=""
+                            onkeyup="generateCV()"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">End Date</label>
+                          <input
+                            name="edu_graduation_date"
+                            type="date"
+                            class="form-control edu_graduation_date"
+                            id=""
+                            onkeyup="generateCV()"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">Description</label>
+                          <input
+                            name="edu_description"
+                            type="text"
+                            class="form-control edu_description"
+                            id=""
+                            onkeyup="generateCV()"
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                      </div>
+
+                      <button
+                        data-repeater-delete
+                        type="button"
+                        class="repeater-remove-btn"
+                      >
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  data-repeater-create
+                  value="Add"
+                  class="repeater-add-btn"
+                >
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <div class="cv-form-block">
+              <div class="cv-form-row-title">
+                <h3>projects</h3>
+              </div>
+
+              <div class="row-separator repeater">
+                <div class="repeater" data-repeater-list="group-d">
+                  <div data-repeater-item>
+                    <div class="cv-form-row cv-form-row-experience">
+                      <div class="cols-3">
+                        <div class="form-element">
+                          <label for="" class="form-label">Project Name</label>
+                          <input
+                            name="proj_title"
+                            type="text"
+                            class="form-control proj_title"
+                            id=""
+                            onkeyup=""
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">Project link</label>
+                          <input
+                            name="proj_link"
+                            type="text"
+                            class="form-control proj_link"
+                            id=""
+                            onkeyup=""
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                        <div class="form-element">
+                          <label for="" class="form-label">Description</label>
+                          <input
+                            name="proj_description"
+                            type="text"
+                            class="form-control proj_description"
+                            id=""
+                            onkeyup=""
+                          />
+                          <span class="form-text"></span>
+                        </div>
+                      </div>
+                      <button
+                        data-repeater-delete
+                        type="button"
+                        class="repeater-remove-btn"
+                      >
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  data-repeater-create
+                  value="Add"
+                  class="repeater-add-btn"
+                >
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <div class="cv-form-block">
+              <div class="cv-form-row-title">
+                <h3>skills</h3>
+              </div>
+
+              <div class="row-separator repeater">
+                <div class="repeater" data-repeater-list="group-e">
+                  <div data-repeater-item>
+                    <div class="cv-form-row cv-form-row-skills">
+                      <div class="form-element">
+                        <label for="" class="form-label">Skill</label>
+                        <input
+                          name="skill"
+                          type="text"
+                          class="form-control skill"
+                          id=""
+                          onkeyup=""
+                          placeholder="Skills"
+                        />
+                        <span class="form-text"></span>
+                      </div>
+
+                      <button
+                        data-repeater-delete
+                        type="button"
+                        class="repeater-remove-btn"
                       >
                         <ion-icon name="remove-outline"></ion-icon>
                       </button>
