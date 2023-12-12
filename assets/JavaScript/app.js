@@ -45,6 +45,19 @@ let firstNameElem = cvForm.firstname,
   phoneElem = cvForm.phoneno,
   summaryElem = cvForm.summary;
 
+let nameDsp = document.getElementById("fullname_dsp"),
+  imageDsp = document.getElementById("image_dsp"),
+  phonenoDsp = document.getElementById("phoneno_dsp"),
+  emailDsp = document.getElementById("email_dsp"),
+  addressDsp = document.getElementById("address_dsp"),
+  designationDsp = document.getElementById("designation_dsp"),
+  summaryDsp = document.getElementById("summary_dsp"),
+  projectsDsp = document.getElementById("projects_dsp"),
+  achievementsDsp = document.getElementById("achievements_dsp"),
+  skillsDsp = document.getElementById("skills_dsp"),
+  educationsDsp = document.getElementById("educations_dsp"),
+  experiencesDsp = document.getElementById("experiences_dsp");
+
 const fetchValues = (attrs, ...nodeLists) => {
   let elemsAttrsCount = nodeLists.length;
   let elemsDataCount = nodeLists[0].length;
@@ -107,6 +120,93 @@ const getUserInputs = () => {
   );
   designationElem.addEventListener("keyup", (e) =>
     validateFormData(e.target, validType.TEXT, "Designation")
+  );
+
+  achievementsTitleElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.ANY, "Title")
+    )
+  );
+  achievementsDescriptionElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.ANY, "Description")
+    )
+  );
+  expTitleElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.ANY, "Title")
+    )
+  );
+  expOrganizationElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.ANY, "Organization")
+    )
+  );
+  expLocationElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.ANY, "Location")
+    )
+  );
+  expStartDateElem.forEach((input) =>
+    input.addEventListener("blur", (e) =>
+      validateFormData(e.target, validType.ANY, "Start Date")
+    )
+  );
+  expEndDateElem.forEach((input) =>
+    input.addEventListener("blur", (e) =>
+      validateFormData(e.target, validType.ANY, "End Date")
+    )
+  );
+  expDescriptionElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.ANY, "Description")
+    )
+  );
+  eduSchoolElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.ANY, "School")
+    )
+  );
+  eduCityElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.TEXT, "City")
+    )
+  );
+  eduStartDateElem.forEach((input) =>
+    input.addEventListener("blur", (e) =>
+      validateFormData(e.target, validType.ANY, "Start Date")
+    )
+  );
+  eduGraduationDateElem.forEach((input) =>
+    input.addEventListener("blur", (e) =>
+      validateFormData(e.target, validType.ANY, "Graduation Date")
+    )
+  );
+  eduDescriptionElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.TEXT, "Discription")
+    )
+  );
+
+  projTitleElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.TEXT, "Title")
+    )
+  );
+  projLinkElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.TEXT, "Link")
+    )
+  );
+  projDescriptionElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.TEXT, "Description")
+    )
+  );
+  skillElem.forEach((input) =>
+    input.addEventListener("keyup", (e) =>
+      validateFormData(e.target, validType.TEXT, "skill")
+    )
   );
 
   return {
@@ -213,7 +313,18 @@ function removeErrMsg(formElem) {
   formElem.nextElementSibling.innerHTML = "";
 }
 
+const displayCV = (userData) => {
+  nameDsp.innerHTML =
+    userData.firstname + "" + userData.middlename + "" + userData.lastname;
+  phonenoDsp.innerHTML = userData.phoneElem;
+  emailDsp.innerHTML = userData.emailElem;
+  addressDsp.innerHTML = userData.addressElem;
+  designationDsp.innerHTML = userData.designationElem;
+  summaryDsp.innerHTML = userData.summaryElem;
+};
+
 const generateCV = () => {
   let userData = getUserInputs();
+  displayCV(userData);
   console.log(userData);
 };
