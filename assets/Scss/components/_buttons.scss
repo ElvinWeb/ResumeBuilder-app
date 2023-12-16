@@ -9,7 +9,7 @@
 }
 
 .btn {
-    font-size: 14.5px;
+    font-size: 15px;
     font-weight: 600;
     padding: 1.4rem 1.6rem;
     border-radius: 4px;
@@ -57,9 +57,7 @@
 }
 
 .repeater-remove-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    @include position(absolute, null, 10px, null, 10px);
     z-index: 99;
     width: 28px;
     height: 28px;
@@ -71,5 +69,5 @@
 
 .repeater-add-btn,
 .repeater-remove-btn {
-    @include flex-box(center);
+    @include flex-box(center, center);
 }

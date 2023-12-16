@@ -1,6 +1,6 @@
 .navbar {
     height: 80px;
-    @include flex-box(null);
+    @include flex-box(null, center);
     box-shadow: $shadow-color;
 
     .container {
@@ -8,7 +8,7 @@
     }
 
     .navbar-brand {
-        @include flex-box(flex-end);
+        @include flex-box(flex-end, center);
         font-size: 1.8rem;
 
         &-text {
@@ -29,6 +29,6 @@
     }
 
     .brand-and-toggler {
-        @include flex-box(space-between);
+        @include flex-box(space-between, center);
     }
 }

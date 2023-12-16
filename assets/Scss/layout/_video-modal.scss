@@ -2,9 +2,7 @@
     max-width: 200px;
 
     &-container {
-        position: fixed;
-        top: 0;
-        left: 0;
+        @include position(fixed, null, 0, 0, null);
         width: 100%;
         height: 100%;
         z-index: 99;
@@ -13,7 +11,7 @@
         visibility: hidden;
         pointer-events: none;
         transition: $transition;
-        @include flex-box(center);
+        @include flex-box(center, center);
 
         video {
             width: 90%;
@@ -36,9 +34,7 @@
     }
 
     &-close {
-        position: absolute;
-        top: 30px;
-        right: 40px;
+        @include position(absolute, null, 30px, null, 40px);
         font-size: 30px;
         cursor: pointer;
     }

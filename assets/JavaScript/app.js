@@ -7,6 +7,7 @@ const phoneRegex =
 /* supports following number formats - (123) 456-7890, (123)456-7890, 123-456-7890, 123.456.7890, 1234567890, +31636363634, 075-63546725 */
 const digitRegex = /^\d+$/;
 
+//form reader
 $(document).ready(function () {
   $(".repeater").repeater({
     initEmpty: false,
@@ -16,7 +17,7 @@ $(document).ready(function () {
     show: function () {
       $(this).slideDown();
     },
-    hide: function () {
+    hide: function (deleteElement) {
       $(this).slideUp(deleteElement);
       setTimeout(() => {
         generateCV();
@@ -313,6 +314,23 @@ function removeErrMsg(formElem) {
   formElem.nextElementSibling.innerHTML = "";
 }
 
+const showListData = (listData, listContainer) => {
+  listContainer.innerHTML = "";
+  listData.forEach((data) => {
+    let itemElem = document.createElement("div");
+    itemElem.classList.add("preview-item");
+
+    for (const item of listItem) {
+      let subItemList = document.createElement("span");
+      subItemList.classList.add("preview-item-val");
+      subItemList.innerHTML = `${data[item]}`;
+      itemElem.appendChild(subItemList);
+    }
+
+    listContainer.appendChild(itemElem);
+  });
+};
+
 const displayCV = (userData) => {
   nameDsp.innerHTML =
     userData.firstname + "" + userData.middlename + "" + userData.lastname;
@@ -321,6 +339,12 @@ const displayCV = (userData) => {
   addressDsp.innerHTML = userData.addressElem;
   designationDsp.innerHTML = userData.designationElem;
   summaryDsp.innerHTML = userData.summaryElem;
+
+  showListData(userData.projects, projectsDsp);
+  showListData(userData.achievements, achievementsDsp);
+  showListData(userData.skills, skillsDsp);
+  showListData(userData.educations, educationsDsp);
+  showListData(userData.experiences, experiencesDsp);
 };
 
 const generateCV = () => {
@@ -328,3 +352,12 @@ const generateCV = () => {
   displayCV(userData);
   console.log(userData);
 };
+
+function previewImage() {
+  let reader = new FileReader();
+  reader.readAsDataURL(imageElem.files[0]);
+
+  reader.onload = (ofevent) => {
+    imageDsp.src = ofevent.target.result;
+  };
+}

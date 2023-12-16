@@ -9,7 +9,7 @@
 
     .btn-group {
         margin-top: 2rem;
-        @include flex-box(flex-start);
+        @include flex-box(flex-start, center);
     }
 
     .section-one-r {
@@ -23,7 +23,7 @@
             @extend %section-title;
         }
 
-        
+
     }
 
 }

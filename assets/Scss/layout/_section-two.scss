@@ -7,9 +7,7 @@
 
         .section-item {
             @include img-width(350px);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
+            @include flex-direction(column, null, flex-start);
         }
 
         .section-item-icon {

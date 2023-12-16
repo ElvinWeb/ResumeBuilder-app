@@ -1,20 +1,40 @@
-@mixin flex-box($justify) {
+@mixin flex-box($justify, $align) {
     @if $justify==null {
-        @extend %flex-center;
+        display: flex;
+        align-items: $align;
     }
-
     @else {
-        @extend %flex-center;
+        display: flex;
+        align-items: $align;
         justify-content: $justify;
     }
 }
 
-@mixin flex-direction($direction) {
-    @include flex-box(center);
+@mixin flex-direction($direction, $justify, $align) {
+    @include flex-box($justify, $align);
     flex-direction: $direction;
 }
 
 @mixin img-width($width) {
     max-width: $width;
     margin: 0 auto;
+}
+
+@mixin position($position, $bottom, $top, $left, $right) {
+    position: $position;
+
+    @if $right==null and $top==null {
+        bottom: $bottom;
+        left: $left;
+    }
+
+    @if $bottom==null and $right==null {
+        top: $top;
+        left: $left;
+    }
+
+    @if $bottom==null and $left==null {
+        top: $top;
+        right: $right;
+    }
 }

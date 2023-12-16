@@ -13,13 +13,85 @@
         padding: 3rem 3rem 3rem 4rem;
     }
 
+    .preview-block {
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+
+        .preview-block-title {
+            margin-bottom: 1rem;
+
+            h3 {
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        .preview-block-list .preview-item {
+            font-size: 1.5rem;
+            margin-bottom: 0.2rem;
+            opacity: 0.95;
+        }
+    }
+
+    .preview-container-right {
+        .preview-block-title {
+            color: $clr-dark;
+        }
+
+        .preview-block-list .preview-item {
+            margin-top: 1.8rem;
+        }
+
+        .achievements-items.preview-blk-list .preview-item span:first-child,
+        .educations-items.preview-blk-list .preview-item span:first-child,
+        .experiences-items.preview-blk-list .preview-item span:first-child {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .educations-items.preview-blk-list .preview-item span:nth-child(2),
+        .experiences-items.preview-blk-list .preview-item span:nth-child(2) {
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+
+        .educations-items.preview-blk-list .preview-item span:nth-child(3),
+        .experiences-items.preview-blk-list .preview-item span:nth-child(3) {
+            font-style: italic;
+            margin-right: 1rem;
+        }
+
+        .educations-items.preview-blk-list .preview-item span:nth-child(4),
+        .educations-items.preview-blk-list .preview-item span:nth-child(5),
+        .experiences-items.preview-blk-list .preview-item span:nth-child(4),
+        .experiences-items.preview-blk-list .preview-item span:nth-child(5) {
+            margin-right: 1rem;
+            background-color: $clr-green;
+            color: $clr-white;
+            padding: 0 1rem;
+            border-radius: 0.6rem;
+        }
+
+        .educations-items.preview-blk-list .preview-item span:nth-child(6),
+        .experiences-items.preview-blk-list .preview-item span:nth-child(6) {
+            font-size: 13.5px;
+            display: block;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+    }
+
     .preview-image {
         width: 120px;
         height: 120px;
         border-radius: 50%;
         overflow: hidden;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto;
 
         img {
             width: 100%;
@@ -35,13 +107,11 @@
         position: relative;
 
         &::before {
-            position: absolute;
+            @include position(absolute, -10px, null, 50%, null);
             content: " ";
-            bottom: -10px;
             width: 50%;
             height: 1.5px;
             background-color: #fff;
-            left: 50%;
             transform: translateX(-50%);
 
         }
