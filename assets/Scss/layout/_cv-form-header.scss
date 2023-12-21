@@ -1,0 +1,10 @@
+.cv-form-header {
+    .header-container {
+        margin-top: 40px;
+        @include flex-box(center, center);
+
+        .title {
+            font-size: 45px;
+        }
+    }
+}
