@@ -1,119 +1,135 @@
-.preview-container {
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: 32% auto;
-    box-shadow: $shadow-color;
-    overflow: hidden;
-
-    &-left {
-        padding: 3rem 3rem 2rem 3rem;
+.print-area {
+    @include print {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        visibility: visible;
+        overflow: hidden;
     }
 
-    &-right {
-        padding: 3rem 3rem 3rem 4rem;
-    }
+    .preview-container {
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 32% auto;
+        box-shadow: $shadow-color;
+        overflow: hidden;
 
-    .preview-block {
-        padding: 1rem 0;
-        margin-bottom: 1rem;
+        &-left {
+            padding: 3rem 3rem 2rem 3rem;
+        }
 
-        .preview-block-title {
+        &-right {
+            padding: 3rem 3rem 3rem 4rem;
+        }
+
+        .preview-block {
+            padding: 1rem 0;
             margin-bottom: 1rem;
 
-            h3 {
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
+            .preview-block-title {
+                margin-bottom: 1rem;
+                @include flex-box(flex-start, null);
+                gap: 10px;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-                padding-bottom: 0.5rem;
+
+                .icon {
+                    font-size: 25px;
+                }
+
+                h3 {
+                    letter-spacing: 0.5px;
+                    padding-bottom: 0.5rem;
+                }
+            }
+
+            .preview-block-list .preview-item {
+                font-size: 1.5rem;
+                margin-bottom: 0.2rem;
+                opacity: 0.95;
             }
         }
 
-        .preview-block-list .preview-item {
-            font-size: 1.5rem;
-            margin-bottom: 0.2rem;
-            opacity: 0.95;
-        }
-    }
+        .preview-container-right {
+            .preview-block-title {
+                color: $clr-dark;
+            }
 
-    .preview-container-right {
-        .preview-block-title {
-            color: $clr-dark;
+            .preview-block-list .preview-item {
+                margin-top: 1.8rem;
+            }
+
+            .achievements-items.preview-blk-list .preview-item span:first-child,
+            .educations-items.preview-blk-list .preview-item span:first-child,
+            .experiences-items.preview-blk-list .preview-item span:first-child {
+                display: block;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                background-color: rgba(0, 0, 0, 0.03);
+            }
+
+            .educations-items.preview-blk-list .preview-item span:nth-child(2),
+            .experiences-items.preview-blk-list .preview-item span:nth-child(2) {
+                font-weight: 600;
+                margin-right: 1rem;
+            }
+
+            .educations-items.preview-blk-list .preview-item span:nth-child(3),
+            .experiences-items.preview-blk-list .preview-item span:nth-child(3) {
+                font-style: italic;
+                margin-right: 1rem;
+            }
+
+            .educations-items.preview-blk-list .preview-item span:nth-child(4),
+            .educations-items.preview-blk-list .preview-item span:nth-child(5),
+            .experiences-items.preview-blk-list .preview-item span:nth-child(4),
+            .experiences-items.preview-blk-list .preview-item span:nth-child(5) {
+                margin-right: 1rem;
+                background-color: $clr-green;
+                color: $clr-white;
+                padding: 0 1rem;
+                border-radius: 0.6rem;
+            }
+
+            .educations-items.preview-blk-list .preview-item span:nth-child(6),
+            .experiences-items.preview-blk-list .preview-item span:nth-child(6) {
+                font-size: 13.5px;
+                display: block;
+                opacity: 0.8;
+                margin-top: 1rem;
+            }
+
         }
 
-        .preview-block-list .preview-item {
-            margin-top: 1.8rem;
+        .preview-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            overflow: hidden;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
-        .achievements-items.preview-blk-list .preview-item span:first-child,
-        .educations-items.preview-blk-list .preview-item span:first-child,
-        .experiences-items.preview-blk-list .preview-item span:first-child {
-            display: block;
+        .preview-item-name {
+            font-size: 2.4rem;
             font-weight: 600;
-            margin-bottom: 1rem;
-            background-color: rgba(0, 0, 0, 0.03);
-        }
+            margin: 1.8rem 0;
+            position: relative;
 
-        .educations-items.preview-blk-list .preview-item span:nth-child(2),
-        .experiences-items.preview-blk-list .preview-item span:nth-child(2) {
-            font-weight: 600;
-            margin-right: 1rem;
-        }
-
-        .educations-items.preview-blk-list .preview-item span:nth-child(3),
-        .experiences-items.preview-blk-list .preview-item span:nth-child(3) {
-            font-style: italic;
-            margin-right: 1rem;
-        }
-
-        .educations-items.preview-blk-list .preview-item span:nth-child(4),
-        .educations-items.preview-blk-list .preview-item span:nth-child(5),
-        .experiences-items.preview-blk-list .preview-item span:nth-child(4),
-        .experiences-items.preview-blk-list .preview-item span:nth-child(5) {
-            margin-right: 1rem;
-            background-color: $clr-green;
-            color: $clr-white;
-            padding: 0 1rem;
-            border-radius: 0.6rem;
-        }
-
-        .educations-items.preview-blk-list .preview-item span:nth-child(6),
-        .experiences-items.preview-blk-list .preview-item span:nth-child(6) {
-            font-size: 13.5px;
-            display: block;
-            opacity: 0.8;
-            margin-top: 1rem;
-        }
-
-    }
-
-    .preview-image {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 0 auto;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .preview-item-name {
-        font-size: 2.4rem;
-        font-weight: 600;
-        margin: 1.8rem 0;
-        position: relative;
-
-        &::before {
-            @include position(absolute, -10px, null, 50%, null);
-            content: " ";
-            width: 50%;
-            height: 1.5px;
-            background-color: #fff;
-            transform: translateX(-50%);
-
+            &::before {
+                @include position(absolute, -10px, null, 50%, null);
+                content: "";
+                width: 50%;
+                height: 1.5px;
+                background-color: #fff;
+                transform: translateX(-50%);
+            }
         }
     }
 }

@@ -3,27 +3,51 @@
     min-height: 80vh;
     @extend %flex-center;
 
-    .section-one-l img {
-        @include img-width(750px);
+    .section-one-content {
+        @include laptop {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 3rem;
+        }
+
+        .section-one-l img {
+            @include img-width(750px);
+        }
+
+        .section-one-r {
+            @include img-width(545px);
+
+            @include laptop {
+                text-align: left;
+            }
+
+            img {
+                margin-top: 4rem;
+            }
+
+            .lg-title {
+                @extend %section-title;
+            }
+
+
+        }
     }
+
 
     .btn-group {
         margin-top: 2rem;
-        @include flex-box(flex-start, center);
-    }
+        @include flex-box(center, center);
 
-    .section-one-r {
-        @include img-width(545px);
-
-        img {
-            margin-top: 4rem;
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .lg-title {
-            @extend %section-title;
+        @include laptop {
+            justify-content: flex-start !important;
         }
-
-
     }
+
+
 
 }

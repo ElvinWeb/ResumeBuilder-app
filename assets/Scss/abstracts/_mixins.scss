@@ -3,6 +3,7 @@
         display: flex;
         align-items: $align;
     }
+
     @else {
         display: flex;
         align-items: $align;
@@ -36,5 +37,35 @@
     @if $bottom==null and $left==null {
         top: $top;
         right: $right;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (max-width: 1250px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media only screen and (min-width: 993px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: 290px) {
+        @content;
+    }
+}
+
+@mixin print {
+    @media only print {
+        @content;
     }
 }

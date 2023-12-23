@@ -529,6 +529,48 @@
                 </button>
               </div>
             </div>
+            <div class="cv-form-block">
+              <div class="cv-form-row-title">
+                <h3>Languages</h3>
+              </div>
+
+              <div class="row-separator repeater">
+                <div class="repeater" data-repeater-list="group-f">
+                  <div data-repeater-item>
+                    <div class="cv-form-row cv-form-row-languages">
+                      <div class="form-element">
+                        <label for="" class="form-label">Languages</label>
+                        <input
+                          name="language"
+                          type="text"
+                          class="form-control language"
+                          id=""
+                          onkeyup=""
+                          placeholder="Languages"
+                        />
+                        <span class="form-text"></span>
+                      </div>
+
+                      <button
+                        data-repeater-delete
+                        type="button"
+                        class="repeater-remove-btn"
+                      >
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  data-repeater-create
+                  value="Add"
+                  class="repeater-add-btn"
+                >
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -553,7 +595,8 @@
             </div>
             <div class="preview-block">
               <div class="preview-block-title">
-                <h3>about</h3>
+                <ion-icon name="person-circle" class="icon"></ion-icon>
+                <h3 class="text-uppercase">about</h3>
               </div>
               <div class="preview-block-list">
                 <div class="preview-item">
@@ -572,7 +615,8 @@
             </div>
             <div class="preview-block">
               <div class="preview-block-title">
-                <h3>skills</h3>
+                <ion-icon name="star" class="icon"></ion-icon>
+                <h3 class="text-uppercase">skills</h3>
               </div>
               <div
                 class="skills-items preview-block-list"
@@ -583,7 +627,11 @@
           <div class="preview-container-right bg-white">
             <div class="preview-block">
               <div class="preview-block-title">
-                <h3>Achievements</h3>
+                <ion-icon
+                  name="shield-checkmark-outline"
+                  class="icon"
+                ></ion-icon>
+                <h3 class="text-uppercase">Achievements</h3>
               </div>
               <div
                 class="achievements-items preview-block-list"
@@ -593,7 +641,8 @@
 
             <div class="preview-block">
               <div class="preview-block-title">
-                <h3>Educations</h3>
+                <ion-icon name="school-outline" class="icon"></ion-icon>
+                <h3 class="text-uppercase">Educations</h3>
               </div>
               <div
                 class="educations-items preview-block-list"
@@ -603,7 +652,8 @@
 
             <div class="preview-block">
               <div class="preview-block-title">
-                <h3>Experiences</h3>
+                <ion-icon name="business-outline" class="icon"></ion-icon>
+                <h3 class="text-uppercase">Work Experiences</h3>
               </div>
               <div
                 class="experiences-items preview-block-list"
@@ -613,11 +663,22 @@
 
             <div class="preview-block">
               <div class="preview-block-title">
-                <h3>Projects</h3>
+                <ion-icon name="git-network-outline" class="icon"></ion-icon>
+                <h3 class="text-uppercase">Projects</h3>
               </div>
               <div
                 class="projects-items preview-block-list"
                 id="projects_dsp"
+              ></div>
+            </div>
+            <div class="preview-block">
+              <div class="preview-block-title">
+                <ion-icon name="language-outline" class="icon"></ion-icon>
+                <h3 class="text-uppercase">Languages</h3>
+              </div>
+              <div
+                class="projects-items preview-block-list"
+                id="languages_dsp"
               ></div>
             </div>
           </div>
@@ -626,7 +687,7 @@
     </section>
     <section class="print-btn-section">
       <div class="container">
-        <button type="button" class="print-btn btn btn-primary">
+        <button type="button" class="print-btn btn btn-primary" onclick="printCV()">
           Print CV
         </button>
       </div>

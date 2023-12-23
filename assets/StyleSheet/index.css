@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.section-one .section-one-r .lg-title, .header-content .lg-title {
+.section-one .section-one-content .section-one-r .lg-title, .header-content .lg-title {
   padding: 1.4rem 0;
   font-size: 37px;
   line-height: 1.4;
@@ -30,6 +30,11 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Nunito Sans", sans-serif;
+}
+@media only print {
+  body {
+    visibility: hidden;
+  }
 }
 
 button {
@@ -175,6 +180,40 @@ a {
   color: #fff;
 }
 
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.navbar .container {
+  width: 100%;
+}
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.8rem;
+}
+.navbar .navbar-brand-text {
+  color: #1e2532;
+  font-weight: 700;
+  font-size: 21px;
+}
+.navbar .navbar-brand-text span {
+  color: #1A91F0;
+}
+.navbar .navbar-brand-icon {
+  width: 25px;
+  margin-right: 6px;
+  opacity: 0.8;
+}
+.navbar .brand-and-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header {
   min-height: calc(100vh - 80px);
   display: flex;
@@ -200,67 +239,68 @@ a {
   font-weight: 600;
 }
 
-.navbar {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-.navbar .container {
-  width: 100%;
-}
-.navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 1.8rem;
-}
-.navbar .navbar-brand-text {
-  color: #1e2532;
-  font-weight: 700;
-  font-size: 23px;
-}
-.navbar .navbar-brand-text span {
-  color: #1A91F0;
-}
-.navbar .navbar-brand-icon {
-  width: 25px;
-  margin-right: 6px;
-  opacity: 0.8;
-}
-.navbar .brand-and-toggler {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .section-one {
   padding: 8rem 0;
   min-height: 80vh;
 }
-.section-one .section-one-l img {
+@media only screen and (min-width: 993px) {
+  .section-one .section-one-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+}
+.section-one .section-one-content .section-one-l img {
   max-width: 750px;
   margin: 0 auto;
+}
+.section-one .section-one-content .section-one-r {
+  max-width: 545px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 993px) {
+  .section-one .section-one-content .section-one-r {
+    text-align: left;
+  }
+}
+.section-one .section-one-content .section-one-r img {
+  margin-top: 4rem;
 }
 .section-one .btn-group {
   margin-top: 2rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
-.section-one .section-one-r {
-  max-width: 545px;
-  margin: 0 auto;
+@media only screen and (max-width: 290px) {
+  .section-one .btn-group {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
-.section-one .section-one-r img {
-  margin-top: 4rem;
+@media only screen and (min-width: 993px) {
+  .section-one .btn-group {
+    justify-content: flex-start !important;
+  }
 }
+
 .section-two {
   padding: 64px 0;
 }
 .section-two .section-items {
   display: grid;
   gap: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .section-two .section-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-two .section-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .section-two .section-items .section-item {
   max-width: 350px;
@@ -269,11 +309,21 @@ a {
   align-items: flex-start;
   flex-direction: column;
 }
+@media only screen and (min-width: 993px) {
+  .section-two .section-items .section-item {
+    text-align: left;
+  }
+}
 .section-two .section-items .section-item-icon {
   margin: 1rem 0;
 }
 .section-two .section-items .section-item-icon img {
   margin: 0 auto;
+}
+@media only screen and (min-width: 993px) {
+  .section-two .section-items .section-item-icon img {
+    margin-left: 0;
+  }
 }
 .section-two .section-items .section-item-title {
   color: #1A1C6A;

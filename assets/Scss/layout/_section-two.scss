@@ -5,9 +5,21 @@
         display: grid;
         gap: 2rem;
 
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include laptop {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         .section-item {
             @include img-width(350px);
             @include flex-direction(column, null, flex-start);
+
+            @include laptop {
+                text-align: left;
+            }
         }
 
         .section-item-icon {
@@ -15,6 +27,10 @@
 
             img {
                 margin: 0 auto;
+
+                @include laptop {
+                    margin-left: 0;
+                }
             }
         }
 
