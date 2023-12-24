@@ -2,17 +2,19 @@
 $clr-blue: #1A91F0;
 $clr-blue-mid: #1170CD;
 $clr-blue-dark: #1A1C6A;
+$clr-blue-shade: #282b8f;
 $clr-white: #fff;
 $clr-bright: #EFF2F9;
 $clr-dark: #1e2532;
 $clr-black: #000;
 $clr-grey: #656e83;
 $clr-green: #084C41;
+$clr-yellow: #f9ba44;
 $shadow-color: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
 rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 /* <========== Variable-Maps =======> */
 $text-colors: (text-blue: $clr-blue, text-blue-mid: $clr-blue-mid, text-blue-dark: $clr-blue-dark, text-bright: $clr-bright, text-dark: $clr-dark, text-gray: $clr-grey, text-white: $clr-white);
-$bg-colors: (bg-blue: $clr-blue, bg-blue-mid: $clr-blue-mid, bg-blue-dark: $clr-blue-dark, bg-bright: $clr-bright, bg-dark: $clr-dark, bg-gray: $clr-grey, bg-white: $clr-white, bg-green: $clr-green);
+$bg-colors: (bg-blue: $clr-blue, bg-blue-mid: $clr-blue-mid, bg-blue-dark: $clr-blue-dark, bg-bright: $clr-bright, bg-dark: $clr-dark, bg-gray: $clr-grey, bg-white: $clr-white, bg-green: $clr-green, bg-blue-shade: $clr-blue-shade);
 $font-sizes: (fs-13: 13px, fs-14: 14px, fs-15: 15px, fs-16: 16px, fs-17: 17px, fs-18: 18px, fs-19: 19px, fs-20: 20px, fs-21: 21px, fs-22: 22px, fs-23: 23px, fs-24: 24px, fs-25:25px);
 $font-weights: (fw-2: 200, fw-3: 300, fw-4: 400, fw-5: 500, fw-6: 600, fw-7: 700, fw-8: 800);
 $text-aligns: (text-center: center, text-left: left, text-right: right);

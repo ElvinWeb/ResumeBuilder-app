@@ -16,6 +16,12 @@
   font-weight: 800;
 }
 
+.section-three-r .resume-img-three, .section-three-r .resume-img-two, .section-three-r .resume-img-one {
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(15, 20, 31, 0.16);
+  width: 51.1%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -332,6 +338,63 @@ a {
 }
 .section-two .section-items .text {
   margin: 0.9rem 0;
+}
+
+.section-three {
+  color: #fff;
+  padding: 130px 0px;
+}
+.section-three-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.section-three-l {
+  width: 50%;
+}
+.section-three-l .left-label {
+  color: #f9ba44;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.section-three-l .left-title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+.section-three-l .left-description {
+  margin-bottom: 30px;
+  font-size: 18px;
+  width: 85%;
+}
+.section-three-r {
+  flex-shrink: 0;
+  position: relative;
+  width: 48%;
+}
+.section-three-r .resume-img-one {
+  position: absolute;
+  left: 0;
+  bottom: -120px;
+}
+.section-three-r .resume-img-two {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-three-r .resume-img-three {
+  position: absolute;
+  top: -120px;
+  right: 0;
 }
 
 .modal {

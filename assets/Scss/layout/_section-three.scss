@@ -1,0 +1,66 @@
+.section-three {
+    color: $clr-white;
+    padding: 130px 0px;
+
+    &-content {
+        @include flex-box(space-between, center);
+        flex-wrap: wrap;
+    }
+
+    &-l {
+        width: 50%;
+
+        .left-label {
+            color: $clr-yellow;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.3px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .left-title {
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 50px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 90%;
+        }
+
+        .left-description {
+            margin-bottom: 30px;
+            font-size: 18px;
+            width: 85%;
+        }
+    }
+
+    &-r {
+        flex-shrink: 0;
+        position: relative;
+        width: 48%;
+
+        .resume-img-one {
+            @extend %resume-design;
+            position: absolute;
+            left: 0;
+            bottom: -120px;
+        }
+
+        .resume-img-two {
+            @extend %resume-design;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .resume-img-three {
+            @extend %resume-design;
+            position: absolute;
+            top: -120px;
+            right: 0;
+        }
+    }
+}
