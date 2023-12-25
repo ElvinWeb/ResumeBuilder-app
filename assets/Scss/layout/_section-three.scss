@@ -43,24 +43,18 @@
 
         .resume-img-one {
             @extend %resume-design;
-            position: absolute;
-            left: 0;
-            bottom: -120px;
+            @include position(absolute, -120px, null, 0, null);
         }
 
         .resume-img-two {
             @extend %resume-design;
-            position: absolute;
-            left: 50%;
-            top: 50%;
+            @include position(absolute, null, 50%, 50%, null);
             transform: translate(-50%, -50%);
         }
 
         .resume-img-three {
             @extend %resume-design;
-            position: absolute;
-            top: -120px;
-            right: 0;
+            @include position(absolute, null, -120px, null, 0);
         }
     }
 }

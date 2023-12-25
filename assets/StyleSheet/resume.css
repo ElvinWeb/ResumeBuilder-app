@@ -59,7 +59,7 @@ a {
 }
 
 .about {
-  padding: 64px 0;
+  padding: 50px 0;
 }
 
 .text {
@@ -295,7 +295,7 @@ a {
 }
 
 .cv-form-header .header-container {
-  margin-top: 40px;
+  padding-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,6 +344,7 @@ a {
 .print-area .preview-container .preview-block .preview-block-title h3 {
   letter-spacing: 0.5px;
   padding-bottom: 0.5rem;
+  font-weight: 700;
 }
 .print-area .preview-container .preview-block .preview-block-list .preview-item {
   font-size: 1.5rem;

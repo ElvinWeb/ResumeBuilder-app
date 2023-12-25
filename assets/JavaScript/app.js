@@ -6,6 +6,7 @@ const phoneRegex =
   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 /* supports following number formats - (123) 456-7890, (123)456-7890, 123-456-7890, 123.456.7890, 1234567890, +31636363634, 075-63546725 */
 const digitRegex = /^\d+$/;
+let navbar = document.querySelector(".navbar");
 
 //form reader
 $(document).ready(function () {
@@ -25,6 +26,9 @@ $(document).ready(function () {
     },
     isFirstItemUndeletable: true,
   });
+});
+window.addEventListener("scroll", function () {
+  navbar.classList[window.scrollY > 50 ? "add" : "remove"]("sticky");
 });
 
 const cvForm = document.getElementById("cv-form");
@@ -64,10 +68,11 @@ const fetchValues = (attrs, ...nodeLists) => {
   let elemsAttrsCount = nodeLists.length;
   let elemsDataCount = nodeLists[0].length;
   let tempDataArr = [];
+  console.log(elemsAttrsCount, elemsDataCount);
   for (let i = 0; i < elemsDataCount; i++) {
     let dataObj = {};
     for (let j = 0; j < elemsAttrsCount; j++) {
-      dataObj[`${attrs[j]}`] = nodeLists[i][j].value;
+      dataObj[`${attrs[j]}`] = nodeLists[j][i].value;
     }
     tempDataArr.push(dataObj);
   }

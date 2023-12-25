@@ -254,7 +254,7 @@ a {
 }
 
 .about {
-  padding: 64px 0;
+  padding: 50px 0;
 }
 
 .text {
@@ -475,7 +475,7 @@ a {
 }
 
 .about {
-  padding: 64px 0;
+  padding: 50px 0;
 }
 
 .text {
@@ -787,13 +787,13 @@ a {
 }
 .section-three-r .resume-img-one {
   position: absolute;
-  left: 0;
   bottom: -120px;
+  left: 0;
 }
 .section-three-r .resume-img-two {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 .section-three-r .resume-img-three {
@@ -916,7 +916,7 @@ a {
 }
 
 .about {
-  padding: 64px 0;
+  padding: 50px 0;
 }
 
 .text {
@@ -1152,7 +1152,7 @@ a {
 }
 
 .cv-form-header .header-container {
-  margin-top: 40px;
+  padding-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1201,6 +1201,7 @@ a {
 .print-area .preview-container .preview-block .preview-block-title h3 {
   letter-spacing: 0.5px;
   padding-bottom: 0.5rem;
+  font-weight: 700;
 }
 .print-area .preview-container .preview-block .preview-block-list .preview-item {
   font-size: 1.5rem;
@@ -1281,4 +1282,11 @@ a {
 
 .print-btn-section {
   margin: 2rem 0 6rem 0;
+}
+
+.navbar.sticky {
+  position: fixed;
+  z-index: 111111;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

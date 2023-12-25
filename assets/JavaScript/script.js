@@ -12,3 +12,7 @@ videoContainer.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   videoContainer.classList.remove("show");
 });
+
+window.addEventListener("scroll", function () {
+  navbar.classList[window.scrollY > 50 ? "add" : "remove"]("sticky");
+});

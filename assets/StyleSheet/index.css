@@ -70,7 +70,7 @@ a {
 }
 
 .about {
-  padding: 64px 0;
+  padding: 50px 0;
 }
 
 .text {
@@ -382,13 +382,13 @@ a {
 }
 .section-three-r .resume-img-one {
   position: absolute;
-  left: 0;
   bottom: -120px;
+  left: 0;
 }
 .section-three-r .resume-img-two {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 .section-three-r .resume-img-three {
