@@ -232,11 +232,11 @@
                         <div class="form-element">
                           <label for="" class="form-label">Title</label>
                           <input
-                            name="exp"
+                            name="exp_title"
                             type="text"
                             class="form-control exp_title"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                             placeholder="Title"
                           />
                           <span class="form-text"></span>
@@ -250,7 +250,7 @@
                             type="text"
                             class="form-control exp_organization"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                             placeholder="Organization"
                           />
                           <span class="form-text"></span>
@@ -262,7 +262,7 @@
                             type="text"
                             class="form-control exp_location"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                             placeholder="Location"
                           />
                           <span class="form-text"></span>
@@ -276,7 +276,7 @@
                             type="date"
                             class="form-control exp_start_date"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                             placeholder="Start Date"
                           />
                           <span class="form-text"></span>
@@ -288,7 +288,7 @@
                             type="date"
                             class="form-control exp_end-date"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                             placeholder="End Date"
                           />
                           <span class="form-text"></span>
@@ -302,7 +302,7 @@
                             type="text"
                             class="form-control exp_description"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                             placeholder="Experience Description"
                           />
                           <span class="form-text"></span>
@@ -345,7 +345,7 @@
                             type="text"
                             class="form-control edu_school"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                           />
                           <span class="form-text"></span>
                         </div>
@@ -356,7 +356,7 @@
                             type="text"
                             class="form-control edu_degree"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                           />
                           <span class="form-text"></span>
                         </div>
@@ -367,12 +367,11 @@
                             type="text"
                             class="form-control edu_city"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                           />
                           <span class="form-text"></span>
                         </div>
                       </div>
-
                       <div class="cols-3">
                         <div class="form-element">
                           <label for="" class="form-label">Start Date</label>
@@ -408,7 +407,6 @@
                           <span class="form-text"></span>
                         </div>
                       </div>
-
                       <button
                         data-repeater-delete
                         type="button"
@@ -446,7 +444,7 @@
                             type="text"
                             class="form-control proj_title"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                           />
                           <span class="form-text"></span>
                         </div>
@@ -457,7 +455,7 @@
                             type="text"
                             class="form-control proj_link"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                           />
                           <span class="form-text"></span>
                         </div>
@@ -468,7 +466,7 @@
                             type="text"
                             class="form-control proj_description"
                             id=""
-                            onkeyup=""
+                            onkeyup="generateCV()"
                           />
                           <span class="form-text"></span>
                         </div>
@@ -509,7 +507,7 @@
                           type="text"
                           class="form-control skill"
                           id=""
-                          onkeyup=""
+                          onkeyup="generateCV()"
                           placeholder="Skills"
                         />
                         <span class="form-text"></span>
@@ -551,7 +549,7 @@
                           type="text"
                           class="form-control language"
                           id=""
-                          onkeyup=""
+                          onkeyup="generateCV()"
                           placeholder="Languages"
                         />
                         <span class="form-text"></span>
@@ -626,7 +624,7 @@
               </div>
               <div
                 class="skills-items preview-block-list"
-                id="skills-display"
+                id="skills_dsp"
               ></div>
             </div>
           </div>
@@ -728,6 +726,6 @@
     <!-- jquery repeater cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.min.js"></script>
     <!-- app js-->
-    <script defer src="./assets/JavaScript/app.js"></script>
+    <script src="./assets/JavaScript/app.js"></script>
   </body>
 </html>

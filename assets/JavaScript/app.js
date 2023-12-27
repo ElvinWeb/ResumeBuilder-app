@@ -68,9 +68,10 @@ const fetchValues = (attrs, ...nodeLists) => {
   let elemsAttrsCount = nodeLists.length;
   let elemsDataCount = nodeLists[0].length;
   let tempDataArr = [];
-  console.log(elemsAttrsCount, elemsDataCount);
+
   for (let i = 0; i < elemsDataCount; i++) {
     let dataObj = {};
+
     for (let j = 0; j < elemsAttrsCount; j++) {
       dataObj[`${attrs[j]}`] = nodeLists[j][i].value;
     }
@@ -84,7 +85,6 @@ const getUserInputs = () => {
     achievementsDescriptionElem = document.querySelectorAll(
       ".achieve_description"
     );
-
   let expTitleElem = document.querySelectorAll(".exp_title"),
     expOrganizationElem = document.querySelectorAll(".exp_organization"),
     expLocationElem = document.querySelectorAll(".exp_location"),
@@ -127,7 +127,6 @@ const getUserInputs = () => {
   designationElem.addEventListener("keyup", (e) =>
     validateFormData(e.target, validType.TEXT, "Designation")
   );
-
   achievementsTitleElem.forEach((input) =>
     input.addEventListener("keyup", (e) =>
       validateFormData(e.target, validType.ANY, "Title")
@@ -201,7 +200,7 @@ const getUserInputs = () => {
   );
   projLinkElem.forEach((input) =>
     input.addEventListener("keyup", (e) =>
-      validateFormData(e.target, validType.TEXT, "Link")
+      validateFormData(e.target, validType.ANY, "Link")
     )
   );
   projDescriptionElem.forEach((input) =>
@@ -247,7 +246,7 @@ const getUserInputs = () => {
       expOrganizationElem,
       expLocationElem,
       expStartDateElem,
-      expEndDateElem,
+      eduGraduationDateElem,
       expDescriptionElem
     ),
     educations: fetchValues(
@@ -317,24 +316,23 @@ const validateFormData = (elem, elemType, elemName) => {
     }
   }
 };
-
 function addErrMsg(formElem, formElemName) {
   formElem.nextElementSibling.innerHTML = `${formElemName} is invalid`;
 }
 function removeErrMsg(formElem) {
   formElem.nextElementSibling.innerHTML = "";
 }
-
 const showListData = (listData, listContainer) => {
   listContainer.innerHTML = "";
+
   listData.forEach((listItem) => {
     let itemElem = document.createElement("div");
     itemElem.classList.add("preview-item");
 
-    for (const item of listItem) {
+    for (const key of listItem) {
       let subItemElem = document.createElement("span");
       subItemElem.classList.add("preview-item-val");
-      subItemElem.innerHTML = `${listItem[item]}`;
+      subItemElem.innerHTML = `${listItem[key]}`;
       itemElem.appendChild(subItemElem);
     }
 
@@ -344,17 +342,16 @@ const showListData = (listData, listContainer) => {
 
 const displayCV = (userData) => {
   nameDsp.innerHTML = `${userData.firstname} ${userData.middlename} ${userData.lastname}`;
-  phonenoDsp.innerHTML = userData.phoneElem;
-  emailDsp.innerHTML = userData.emailElem;
-  addressDsp.innerHTML = userData.addressElem;
-  designationDsp.innerHTML = userData.designationElem;
-  summaryDsp.innerHTML = userData.summaryElem;
-
+  phonenoDsp.innerHTML = userData.phoneno;
+  emailDsp.innerHTML = userData.email;
+  addressDsp.innerHTML = userData.address;
+  designationDsp.innerHTML = userData.designation;
+  summaryDsp.innerHTML = userData.summary;
   showListData(userData.projects, projectsDsp);
   showListData(userData.achievements, achievementsDsp);
-  showListData(userData.skills, skillsDsp);
   showListData(userData.educations, educationsDsp);
   showListData(userData.experiences, experiencesDsp);
+  showListData(userData.skills, skillsDsp);
   showListData(userData.languages, languagesDsp);
 };
 
